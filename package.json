@@ -1,0 +1,27 @@
+{
+  "name": "nft-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "network": "npx hardhat node",
+    "compile": "npx hardhat compile",
+    "re-compile": "npx hardhat clean && npx hardhat compile",
+    "deploy to hardhat": "npx hardhat run scripts/deploy-dev.ts --network localhost",
+    "deploy to sepolia": "npx hardhat run scripts/deploy-prod.ts --network sepolia",
+    "test Shop": "npx hardhat test test/NFTShop.test.ts",
+    "test ReentrancyAttack": "npx hardhat test test/ReentrancyAttack.test.ts",
+    "flattern NFTShop": "npx hardhat flatten contracts/NFTShop.sol > flattern/NFTShopFlattened.sol",
+    "coverage": "npx hardhat coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "hardhat": "^2.13.0"
+  }
+}
